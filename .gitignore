@@ -1,0 +1,13 @@
+# Dependency directories
+node_modules/
+
+# IDE directory
+.idea/
+
+# Build Directory
+dist/
+build/
+
+#logs
+*.logs
+*.log
