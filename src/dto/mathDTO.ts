@@ -1,5 +1,5 @@
 import baseDTO from "./baseDTO";
-import mathEntity from "../Entity/mathEntity";
+import mathEntity from "../entity/mathEntity";
 
 export default class mathDTO extends baseDTO<number, mathEntity> {
     constructor(){

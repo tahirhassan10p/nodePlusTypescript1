@@ -1,5 +1,5 @@
 import baseController from './baseController'
-import mathEntity from "../Entity/mathEntity";
+import mathEntity from "../entity/mathEntity";
 import mathDTO from "../dto/mathDTO";
 import mathRepository from "../repository/mathRepository";
 import mathService from "../service/mathService";

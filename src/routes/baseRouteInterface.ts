@@ -1,5 +1,5 @@
 export default interface baseRouteInterface {
-    readonly prefix:string;
+    readonly prefix: string;
 
-    setupRoutes():void;
+    setupRoutes(): void;
 }

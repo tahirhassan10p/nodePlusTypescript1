@@ -1,16 +1,16 @@
 import baseControllerInterface from './baseControllerInterface'
-import baseEntity from "../Entity/baseEntity";
+import baseEntity from "../entity/baseEntity";
 import baseDTO from "../dto/baseDTO";
 import {injectable} from "inversify";
 import baseRepositoryInterface from "../repository/baseRepositoryInterface";
 import baseServiceInterface from "../service/baseServiceInterface";
 
 @injectable()
-export default abstract class baseController<TKey, TEntity
-    extends baseEntity<TKey>, TDTO
-    extends baseDTO<TKey, TEntity>, TRepository
-    extends baseRepositoryInterface<TKey, TEntity>, TService
-    extends baseServiceInterface<TKey, TEntity, TDTO, TRepository>>
+export default abstract class baseController<TKey,
+    TEntity extends baseEntity<TKey>,
+    TDTO extends baseDTO<TKey, TEntity>,
+    TRepository extends baseRepositoryInterface<TKey, TEntity>,
+    TService extends baseServiceInterface<TKey, TEntity, TDTO, TRepository>>
     implements baseControllerInterface<TKey, TEntity, TDTO, TRepository, TService> {
 
     private service:TService;

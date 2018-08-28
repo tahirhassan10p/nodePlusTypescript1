@@ -1,5 +1,5 @@
 import baseAuditInterface from "./baseAuditInterface";
-import baseEntity from "../Entity/baseEntity";
+import baseEntity from "../entity/baseEntity";
 
 export default abstract class baseDTO<TKey, TEntity extends baseEntity<TKey>> implements baseAuditInterface<TKey>{
     Id:TKey;

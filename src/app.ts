@@ -2,7 +2,7 @@ import express from 'express';
 import mathRoute from './routes/mathRoute'
 import baseRoute from "./routes/baseRoute";
 import mathController from "./controllers/mathController";
-import mathEntity from "./Entity/mathEntity";
+import mathEntity from "./entity/mathEntity";
 import mathDTO from "./dto/mathDTO";
 import mathRepository from "./repository/mathRepository";
 import mathService from "./service/mathService";

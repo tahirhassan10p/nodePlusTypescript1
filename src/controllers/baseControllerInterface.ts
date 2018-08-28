@@ -1,5 +1,5 @@
 import baseDTO from "../dto/baseDTO";
-import baseEntity from "../Entity/baseEntity";
+import baseEntity from "../entity/baseEntity";
 import baseRepositoryInterface from "../repository/baseRepositoryInterface";
 import baseServiceInterface from "../service/baseServiceInterface";
 

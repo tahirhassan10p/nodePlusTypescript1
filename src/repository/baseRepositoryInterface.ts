@@ -1,9 +1,12 @@
-import baseEntity from "../Entity/baseEntity";
+import baseEntity from "../entity/baseEntity";
 
 export default interface baseRepositoryInterface<TKey, TEntity extends baseEntity<TKey>> {
-    get():Array<TEntity>;
+    get(): Array<TEntity>;
+
     // get(id:TKey):void;
-    create(entity:TEntity):TEntity;
-    update(entity:TEntity):TEntity;
-    delete(id:TKey):boolean;
+    create(entity: TEntity): TEntity;
+
+    update(entity: TEntity): TEntity;
+
+    delete(id: TKey): boolean;
 }

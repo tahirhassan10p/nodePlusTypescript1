@@ -1,5 +1,5 @@
 import baseService from "./baseService";
-import mathEntity from "../Entity/mathEntity";
+import mathEntity from "../entity/mathEntity";
 import mathDTO from "../dto/mathDTO";
 import mathRepository from "../repository/mathRepository";
 import mathRepositoryInterface from "../repository/mathRepositoryInterface";
@@ -10,9 +10,8 @@ import TYPES from "../constants/identifiers";
 @injectable()
 export default class mathService
     extends baseService<number, mathEntity, mathDTO, mathRepository>
-    implements mathServiceInterface
-{
-    constructor(@inject(TYPES.mathRepositoryInterface)repository:mathRepositoryInterface){
+    implements mathServiceInterface {
+    constructor(@inject(TYPES.mathRepositoryInterface)repository: mathRepositoryInterface) {
         console.log("math service constructor");
         super(repository);
     }
