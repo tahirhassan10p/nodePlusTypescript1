@@ -1,17 +1,24 @@
-import {Sequelize} from 'sequelize-typescript';
+import "reflect-metadata";
+import {createConnection} from "typeorm";
 
-const sequelize = new Sequelize({
-    username: 'sa',
-    password: 'tenpearls',
-    database: 'database_development',
-    host: 'localhost',
-    dialect: 'mssql',
-    operatorsAliases: false,
-    pool: {
-        max: 5,
-        min: 0,
-        acquire: 30000,
-        idle: 10000
-    },
-    modelPaths: [__dirname + '../entity']
-});
+export const connection = async () => {
+    return await createConnection({
+        type: "mysql",
+        host: "localhost",
+        port: 3306,
+        username: "root",
+        password: "admin",
+        database: "test",
+        entities: [
+            "../entity/**/*.ts"
+         ],
+         migrations: [
+            "../migration/**/*.ts"
+         ],
+         subscribers: [
+            "../subscriber/**/*.ts"
+         ],
+        synchronize: true,
+        logging: false
+    });
+};

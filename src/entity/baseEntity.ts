@@ -1,29 +1,28 @@
 import baseAuditInterface from "../dto/baseAuditInterface";
-import {Table, PrimaryKey, Column, CreatedAt, UpdatedAt, DeletedAt, Model} from 'sequelize-typescript';
+import { PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn, BaseEntity} from 'typeorm';
 
-@Table
 export default class baseEntity<TKey>
-    extends Model<baseEntity<TKey>>
+    extends BaseEntity
     implements baseAuditInterface<TKey> {
 
-    @PrimaryKey
+    @PrimaryColumn()
     Id: TKey;
 
-    @Column
+    @Column()
     CreatedBy: string;
 
-    @CreatedAt
+    @CreateDateColumn()
     CreatedOn: Date;
 
-    @Column
+    @Column()
     LastModifiedBy: string;
 
-    @UpdatedAt
+    @UpdateDateColumn()
     LastModifiedOn: Date;
 
-    @Column
+    @Column()
     IsDeleted: boolean;
 
-    @DeletedAt
+    @Column()
     DeletedOn: Date;
 }
